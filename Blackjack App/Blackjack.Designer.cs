@@ -1296,6 +1296,7 @@ namespace Blackjack_App
             this.btnRestart.TabIndex = 107;
             this.btnRestart.Text = "Restart";
             this.btnRestart.UseVisualStyleBackColor = true;
+            this.btnRestart.Click += new System.EventHandler(this.btnRestart_Click);
             // 
             // Blackjack
             // 
@@ -1411,6 +1412,7 @@ namespace Blackjack_App
             this.Controls.Add(this.btnDeal);
             this.Name = "Blackjack";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Blackjack_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbx2C)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx3C)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx4C)).EndInit();
