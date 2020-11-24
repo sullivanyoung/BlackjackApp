@@ -135,8 +135,9 @@ namespace Blackjack_App
             this.pictureBox40 = new System.Windows.Forms.PictureBox();
             this.pictureBox41 = new System.Windows.Forms.PictureBox();
             this.pictureBox42 = new System.Windows.Forms.PictureBox();
-            this.btnBet = new System.Windows.Forms.Button();
+            this.btnReady = new System.Windows.Forms.Button();
             this.btnRestart = new System.Windows.Forms.Button();
+            this.btnHit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbx2C)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx3C)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx4C)).BeginInit();
@@ -239,7 +240,7 @@ namespace Blackjack_App
             // 
             // btnDeal
             // 
-            this.btnDeal.Location = new System.Drawing.Point(894, 541);
+            this.btnDeal.Location = new System.Drawing.Point(961, 541);
             this.btnDeal.Name = "btnDeal";
             this.btnDeal.Size = new System.Drawing.Size(109, 35);
             this.btnDeal.TabIndex = 0;
@@ -1279,14 +1280,15 @@ namespace Blackjack_App
             this.pictureBox42.TabIndex = 92;
             this.pictureBox42.TabStop = false;
             // 
-            // btnBet
+            // btnReady
             // 
-            this.btnBet.Location = new System.Drawing.Point(894, 476);
-            this.btnBet.Name = "btnBet";
-            this.btnBet.Size = new System.Drawing.Size(109, 35);
-            this.btnBet.TabIndex = 106;
-            this.btnBet.Text = "Bet";
-            this.btnBet.UseVisualStyleBackColor = true;
+            this.btnReady.Location = new System.Drawing.Point(894, 476);
+            this.btnReady.Name = "btnReady";
+            this.btnReady.Size = new System.Drawing.Size(109, 35);
+            this.btnReady.TabIndex = 106;
+            this.btnReady.Text = "Ready";
+            this.btnReady.UseVisualStyleBackColor = true;
+            this.btnReady.Click += new System.EventHandler(this.btnReady_Click);
             // 
             // btnRestart
             // 
@@ -1298,13 +1300,24 @@ namespace Blackjack_App
             this.btnRestart.UseVisualStyleBackColor = true;
             this.btnRestart.Click += new System.EventHandler(this.btnRestart_Click);
             // 
+            // btnHit
+            // 
+            this.btnHit.Location = new System.Drawing.Point(825, 541);
+            this.btnHit.Name = "btnHit";
+            this.btnHit.Size = new System.Drawing.Size(109, 35);
+            this.btnHit.TabIndex = 108;
+            this.btnHit.Text = "Hit";
+            this.btnHit.UseVisualStyleBackColor = true;
+            this.btnHit.Click += new System.EventHandler(this.btnHit_Click);
+            // 
             // Blackjack
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1093, 655);
+            this.Controls.Add(this.btnHit);
             this.Controls.Add(this.btnRestart);
-            this.Controls.Add(this.btnBet);
+            this.Controls.Add(this.btnReady);
             this.Controls.Add(this.pbxTopDealt3);
             this.Controls.Add(this.pictureBox30);
             this.Controls.Add(this.pictureBox31);
@@ -1623,8 +1636,9 @@ namespace Blackjack_App
         private System.Windows.Forms.PictureBox pictureBox40;
         private System.Windows.Forms.PictureBox pictureBox41;
         private System.Windows.Forms.PictureBox pictureBox42;
-        private System.Windows.Forms.Button btnBet;
+        private System.Windows.Forms.Button btnReady;
         private System.Windows.Forms.Button btnRestart;
+        private System.Windows.Forms.Button btnHit;
     }
 }
 

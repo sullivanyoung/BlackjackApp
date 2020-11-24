@@ -50,6 +50,8 @@ namespace Blackjack_App
             dealtCard2 = cards[random.Next(cards.Length)];
             dealtCard3 = cards[random.Next(cards.Length)];
 
+            pbxTopDealer2.BringToFront();
+
             switch (userCard1)
             {
                 case 2:
@@ -221,71 +223,45 @@ namespace Blackjack_App
             switch (dealerCard2)
             {
                 case 2:
-                    pbx2CDealer2.BringToFront();
                     dealer2 = 2;
                     break;
                 case 3:
-                    pbx3CDealer2.BringToFront();
                     dealer2 = 3;
                     break;
                 case 4:
-                    pbx4CDealer2.BringToFront();
                     dealer2 = 4;
                     break;
                 case 5:
-                    pbx5CDealer2.BringToFront();
                     dealer2 = 5;
                     break;
                 case 6:
-                    pbx6CDealer2.BringToFront();
                     dealer2 = 6;
                     break;
                 case 7:
-                    pbx7CDealer2.BringToFront();
                     dealer2 = 7;
                     break;
                 case 8:
-                    pbx8CDealer2.BringToFront();
                     dealer2 = 8;
                     break;
                 case 9:
-                    pbx9CDealer2.BringToFront();
                     dealer2 = 9;
                     break;
                 case 10:
-                    pbx10CDealer2.BringToFront();
                     dealer2 = 10;
                     break;
                 case 11:
-                    pbxJCDealer2.BringToFront();
                     dealer2 = 10;
                     break;
                 case 12:
-                    pbxQCDealer2.BringToFront();
                     dealer2 = 10;
                     break;
                 case 13:
-                    pbxKCDealer2.BringToFront();
                     dealer2 = 10;
                     break;
                 case 14:
-                    pbxACDealer2.BringToFront();
                     dealer2 = 11;
                     break;                    
-            }           
-
-            if (dealer1 + dealer2 >= user1 + user2 && dealer1 + dealer2 <= 21)
-            {
-                MessageBox.Show($"You lost. The dealer had {dealer1 + dealer2} points and you had {user1 + user2} points.");
-                lossAmount = lossAmount + 1;
-                lblLossAmount.Text = Convert.ToString(lossAmount);
-            }
-            else
-            {
-                MessageBox.Show($"You won! The dealer had {dealer1 + dealer2} points and you had {user1 + user2} points.");
-                winAmount = winAmount + 1;
-                lblWinAmount.Text = Convert.ToString(winAmount);
-            }
+            }                    
         }
 
         private void Blackjack_Load(object sender, EventArgs e)
@@ -306,6 +282,70 @@ namespace Blackjack_App
             lblLossAmount.Text = "";
             winAmount = 0;
             lossAmount = 0;
+        }
+
+        private void btnHit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnReady_Click(object sender, EventArgs e)
+        {
+            switch (dealerCard2)
+            {
+                case 2:
+                    pbx2CDealer2.BringToFront();
+                    break;
+                case 3:
+                    pbx3CDealer2.BringToFront();
+                    break;
+                case 4:
+                    pbx4CDealer2.BringToFront();
+                    break;
+                case 5:
+                    pbx5CDealer2.BringToFront();
+                    break;
+                case 6:
+                    pbx6CDealer2.BringToFront();
+                    break;
+                case 7:
+                    pbx7CDealer2.BringToFront();
+                    break;
+                case 8:
+                    pbx8CDealer2.BringToFront();
+                    break;
+                case 9:
+                    pbx9CDealer2.BringToFront();
+                    break;
+                case 10:
+                    pbx10CDealer2.BringToFront();
+                    break;
+                case 11:
+                    pbxJCDealer2.BringToFront();
+                    break;
+                case 12:
+                    pbxQCDealer2.BringToFront();
+                    break;
+                case 13:
+                    pbxKCDealer2.BringToFront();
+                    break;
+                case 14:
+                    pbxACDealer2.BringToFront();
+                    break;
+            }
+
+            if (dealer1 + dealer2 >= user1 + user2 && dealer1 + dealer2 <= 21)
+            {
+                MessageBox.Show($"You lost. The dealer had {dealer1 + dealer2} points and you had {user1 + user2} points.");
+                lossAmount = lossAmount + 1;
+                lblLossAmount.Text = Convert.ToString(lossAmount);
+            }
+            else
+            {
+                MessageBox.Show($"You won! The dealer had {dealer1 + dealer2} points and you had {user1 + user2} points.");
+                winAmount = winAmount + 1;
+                lblWinAmount.Text = Convert.ToString(winAmount);
+            }
         }
     }
 }
