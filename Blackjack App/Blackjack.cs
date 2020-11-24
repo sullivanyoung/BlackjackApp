@@ -19,32 +19,34 @@ namespace Blackjack_App
         14 = Ace
          */
 
-        public static int[] cards = { 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 };
-        public static Random random = new Random();
-        public static int userCard1; // card that appears for user --> refers to array
-        public static int userCard2; // 2nd card that appears for user --> refers to array
-        public static int dealerCard1; // card the appears for dealer --> refers to array
-        public static int dealerCard2; // 2nd card that is held invisible for dealer at start --> refers to array
-        public static int dealtCard1; // user dealt card that appears 1st --> refers to array
-        public static int dealtCard2; // user dealt card that appears 2nd --> refers to array
-        public static int dealtCard3; // user dealt card that appears 3rd --> refers to array
-        public static int user1; // user card value 1
-        public static int user2; // user card value 2
-        public static int dealer1; // dealer card value 1
-        public static int dealer2; // dealer card value 2
-        public static int dealt1; // user hit 1 value
-        public static int dealt2; // user hit 2 value
-        public static int dealt3; // user hit 3 value
-        public static int dealerDealtCard1; // automatic dealer hits 1st --> refers to array
-        public static int dealerDealtCard2; // automatic dealer hits 2nd --> refers to array
-        public static int dealerDealtCard3; // automatic dealer hits 3rd --> refers to array
-        public static int dealerDealt1; // dealer hit 1 value
-        public static int dealerDealt2; // dealer hit 2 value
-        public static int dealerDealt3; // dealer hit 3 value
-        public static int lossAmount; // calculate total losses
-        public static int winAmount; // calculate total wins
-        public static int userTotal; // user total amount (user1 + user 2... etc)
-        public static int dealerTotal; // dealer total amount (dealer1 + dealer 2...etc)
+        public int[] cards = { 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 };
+        public Random random = new Random();
+        public int userCard1; // card that appears for user --> refers to array
+        public int userCard2; // 2nd card that appears for user --> refers to array
+        public int dealerCard1; // card the appears for dealer --> refers to array
+        public int dealerCard2; // 2nd card that is held invisible for dealer at start --> refers to array
+        public int dealtCard1; // user dealt card that appears 1st --> refers to array
+        public int dealtCard2; // user dealt card that appears 2nd --> refers to array
+        public int dealtCard3; // user dealt card that appears 3rd --> refers to array
+        public int user1; // user card value 1
+        public int user2; // user card value 2
+        public int dealer1; // dealer card value 1
+        public int dealer2; // dealer card value 2
+        public int dealt1; // user hit 1 value
+        public int dealt2; // user hit 2 value
+        public int dealt3; // user hit 3 value
+        public int dealerDealtCard1; // automatic dealer hits 1st --> refers to array
+        public int dealerDealtCard2; // automatic dealer hits 2nd --> refers to array
+        public int dealerDealtCard3; // automatic dealer hits 3rd --> refers to array
+        public int dealerDealt1; // dealer hit 1 value
+        public int dealerDealt2; // dealer hit 2 value
+        public int dealerDealt3; // dealer hit 3 value
+        public int lossAmount; // calculate total losses
+        public int winAmount; // calculate total wins
+        public int userTotal; // user total amount (user1 + user 2... etc)
+        public int dealerTotal; // dealer total amount (dealer1 + dealer 2...etc)
+        public decimal moneyAmount = 100M;
+        public decimal betAmount = 1;
 
         public Blackjack()
         {
@@ -281,8 +283,13 @@ namespace Blackjack_App
             btnHit.Visible = true;
             btnReady.Visible = true;
             btnDeal.Visible = false;
+            btnBet.Visible = true;
+            txtBet.Visible = true;
 
             lbxDealerActions.Items.Clear();
+
+            txtBet.Text = "";
+            lblBetAmount.Text = "Current Bet: $" + Convert.ToString(betAmount);
         }
 
         private void Blackjack_Load(object sender, EventArgs e)
@@ -291,6 +298,8 @@ namespace Blackjack_App
             btnReady.Visible = false;
             btnHit2.Visible = false;
             btnHit3.Visible = false;
+            lblMoneyAmount.Text = "$" + Convert.ToString(moneyAmount);
+            lblBetAmount.Text = "Current Bet: $" + Convert.ToString(betAmount);
         }
 
         private void btnRestart_Click(object sender, EventArgs e)
@@ -311,7 +320,14 @@ namespace Blackjack_App
             btnReady.Visible = false;
             btnHit2.Visible = false;
             btnHit3.Visible = false;
+            btnBet.Visible = false;
+            txtBet.Visible = false;
             lbxDealerActions.Items.Clear();
+            moneyAmount = 100;
+            lblMoneyAmount.Text = "$" + Convert.ToString(moneyAmount);
+            betAmount = 1;
+            txtBet.Text = "";
+            lblBetAmount.Text = "";
         }
 
         private void btnHit_Click(object sender, EventArgs e)
@@ -383,6 +399,11 @@ namespace Blackjack_App
                 btnReady.Visible = false;
                 btnHit.Visible = false;
                 btnDeal.Visible = true;
+                betAmount = 1;
+                txtBet.Text = "";
+                lblBetAmount.Text = "Current Bet: $" + Convert.ToString(betAmount);
+                moneyAmount = moneyAmount - betAmount;
+                lblMoneyAmount.Text = "$" + Convert.ToString(moneyAmount);
             }
             else
             {
@@ -392,7 +413,7 @@ namespace Blackjack_App
 
         private void btnReady_Click(object sender, EventArgs e)
         {
-            if(dealerTotal <= 11)
+            if(dealerTotal <= 14)
             {
                 dealerDealtCard1 = cards[random.Next(cards.Length)];
                 switch (dealerDealtCard1)
@@ -492,6 +513,56 @@ namespace Blackjack_App
                 lbxDealerActions.Items.Add($"Dealer Total: {dealerTotal}");
             }
 
+            if (dealerTotal <= 14)
+            {
+                dealerDealtCard3 = cards[random.Next(cards.Length)];
+                switch (dealerDealtCard3)
+                {
+                    case 2:
+                        dealerDealt3 = 2;
+                        break;
+                    case 3:
+                        dealerDealt3 = 3;
+                        break;
+                    case 4:
+                        dealerDealt3 = 4;
+                        break;
+                    case 5:
+                        dealerDealt3 = 5;
+                        break;
+                    case 6:
+                        dealerDealt3 = 6;
+                        break;
+                    case 7:
+                        dealerDealt3 = 7;
+                        break;
+                    case 8:
+                        dealerDealt3 = 8;
+                        break;
+                    case 9:
+                        dealerDealt3 = 9;
+                        break;
+                    case 10:
+                        dealerDealt3 = 10;
+                        break;
+                    case 11:
+                        dealerDealt3 = 10;
+                        break;
+                    case 12:
+                        dealerDealt3 = 10;
+                        break;
+                    case 13:
+                        dealerDealt3 = 10;
+                        break;
+                    case 14:
+                        dealerDealt3 = 11;
+                        break;
+                }
+                lbxDealerActions.Items.Add($"Dealer hit and got {dealerDealt2}");
+                dealerTotal = dealerTotal + dealerDealt3;
+                lbxDealerActions.Items.Add($"Dealer Total: {dealerTotal}");
+            }
+
             switch (dealerCard2)
             {
                 case 2:
@@ -540,47 +611,52 @@ namespace Blackjack_App
                 MessageBox.Show($"You lost. The dealer had {dealerTotal} points and you had {userTotal} points.");
                 lossAmount = lossAmount + 1;
                 lblLossAmount.Text = Convert.ToString(lossAmount);
+                moneyAmount = moneyAmount - betAmount;
+                lblMoneyAmount.Text = "$" + Convert.ToString(moneyAmount);
             }
             else if(dealerTotal == 21)
             {
                 MessageBox.Show($"The dealer had blackjack, {dealerTotal}! You lost.");
                 lossAmount = lossAmount + 1;
                 lblLossAmount.Text = Convert.ToString(lossAmount);
+                moneyAmount = moneyAmount - betAmount;
+                lblMoneyAmount.Text = "$" + Convert.ToString(moneyAmount);
             }
             else if(dealerTotal > 21)
             {
                 MessageBox.Show($"You won! The dealer broke 21!");
                 winAmount = winAmount + 1;
                 lblWinAmount.Text = Convert.ToString(winAmount);
+                moneyAmount = moneyAmount + betAmount;
+                lblMoneyAmount.Text = "$" + Convert.ToString(moneyAmount);
             }
             else if (userTotal == 21)
             {
                 MessageBox.Show($"You had blackjack {userTotal}! You won!");
                 winAmount = winAmount + 1;
                 lblWinAmount.Text = Convert.ToString(winAmount);
+                moneyAmount = moneyAmount + betAmount;
+                lblMoneyAmount.Text = "$" + Convert.ToString(moneyAmount);
             }
             else
             {
                 MessageBox.Show($"You won! The dealer had {dealerTotal} points and you had {userTotal} points.");
                 winAmount = winAmount + 1;
                 lblWinAmount.Text = Convert.ToString(winAmount);
+                moneyAmount = moneyAmount + betAmount;
+                lblMoneyAmount.Text = "$" + Convert.ToString(moneyAmount);
             }
-
-            pbxTopUser1.BringToFront();
-            pbxTopUser2.BringToFront();
-            pbxTopDealer1.BringToFront();
-            pbxTopDealer2.BringToFront();
-            pbxTopDealt1.BringToFront();
-            pbxTopDealt2.BringToFront();
-            pbxTopDealt3.BringToFront();
 
             btnDeal.Visible = true;
             btnReady.Visible = false;
             btnHit.Visible = false;
             btnHit3.Visible = false;
             btnHit2.Visible = false;
+            btnBet.Visible = false;
+            txtBet.Visible = false;
 
-
+            betAmount = 1;
+            lblBetAmount.Text = "";
         }
 
         private void btnHit2_Click(object sender, EventArgs e)
@@ -649,10 +725,15 @@ namespace Blackjack_App
                 MessageBox.Show($"You broke 21. You lost.");
                 lossAmount = lossAmount + 1;
                 lblLossAmount.Text = Convert.ToString(lossAmount);
+                moneyAmount = moneyAmount - betAmount;
+                lblMoneyAmount.Text = "$" + Convert.ToString(moneyAmount);
                 btnReady.Visible = false;
                 btnHit.Visible = false;
                 btnHit2.Visible = false;
                 btnDeal.Visible = true;
+                betAmount = 1;
+                txtBet.Text = "";
+                lblBetAmount.Text = "Current Bet: $" + Convert.ToString(betAmount);
             }
             else
             {
@@ -726,12 +807,39 @@ namespace Blackjack_App
                 MessageBox.Show($"You broke 21. You lost.");
                 lossAmount = lossAmount + 1;
                 lblLossAmount.Text = Convert.ToString(lossAmount);
+                moneyAmount = moneyAmount - betAmount;
+                lblMoneyAmount.Text = "$" + Convert.ToString(moneyAmount);
                 btnReady.Visible = false;
                 btnHit.Visible = false;
                 btnHit2.Visible = false;
                 btnHit3.Visible = false;
                 btnDeal.Visible = true;
+                betAmount = 1;
+                txtBet.Text = "";
+                lblBetAmount.Text = "Current Bet: $" + Convert.ToString(betAmount);
             }
+        }
+
+        private void btnBet_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                betAmount = betAmount + Convert.ToDecimal(txtBet.Text);
+                if (Convert.ToDecimal(txtBet.Text) > 0 && betAmount <= moneyAmount)
+                {
+                    lblBetAmount.Text = "Current Bet: $" + betAmount;
+                }
+                else
+                {
+                    MessageBox.Show("You must bet more than 0 and no more than your total money");
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please enter an amount in order to place a bet");
+            }
+
+            txtBet.Text = "";
         }
     }
 }

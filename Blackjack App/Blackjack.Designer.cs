@@ -141,6 +141,11 @@ namespace Blackjack_App
             this.btnHit2 = new System.Windows.Forms.Button();
             this.btnHit3 = new System.Windows.Forms.Button();
             this.lbxDealerActions = new System.Windows.Forms.ListBox();
+            this.lblMoney = new System.Windows.Forms.Label();
+            this.lblMoneyAmount = new System.Windows.Forms.Label();
+            this.btnBet = new System.Windows.Forms.Button();
+            this.txtBet = new System.Windows.Forms.TextBox();
+            this.lblBetAmount = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbx2C)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx3C)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx4C)).BeginInit();
@@ -1341,11 +1346,58 @@ namespace Blackjack_App
             this.lbxDealerActions.Size = new System.Drawing.Size(120, 95);
             this.lbxDealerActions.TabIndex = 111;
             // 
+            // lblMoney
+            // 
+            this.lblMoney.AutoSize = true;
+            this.lblMoney.Location = new System.Drawing.Point(891, 74);
+            this.lblMoney.Name = "lblMoney";
+            this.lblMoney.Size = new System.Drawing.Size(42, 13);
+            this.lblMoney.TabIndex = 112;
+            this.lblMoney.Text = "Money:";
+            // 
+            // lblMoneyAmount
+            // 
+            this.lblMoneyAmount.AutoSize = true;
+            this.lblMoneyAmount.Location = new System.Drawing.Point(940, 74);
+            this.lblMoneyAmount.Name = "lblMoneyAmount";
+            this.lblMoneyAmount.Size = new System.Drawing.Size(0, 13);
+            this.lblMoneyAmount.TabIndex = 113;
+            // 
+            // btnBet
+            // 
+            this.btnBet.Location = new System.Drawing.Point(894, 158);
+            this.btnBet.Name = "btnBet";
+            this.btnBet.Size = new System.Drawing.Size(109, 35);
+            this.btnBet.TabIndex = 114;
+            this.btnBet.Text = "Bet";
+            this.btnBet.UseVisualStyleBackColor = true;
+            this.btnBet.Click += new System.EventHandler(this.btnBet_Click);
+            // 
+            // txtBet
+            // 
+            this.txtBet.Location = new System.Drawing.Point(894, 122);
+            this.txtBet.Name = "txtBet";
+            this.txtBet.Size = new System.Drawing.Size(109, 20);
+            this.txtBet.TabIndex = 115;
+            // 
+            // lblBetAmount
+            // 
+            this.lblBetAmount.AutoSize = true;
+            this.lblBetAmount.Location = new System.Drawing.Point(891, 220);
+            this.lblBetAmount.Name = "lblBetAmount";
+            this.lblBetAmount.Size = new System.Drawing.Size(0, 13);
+            this.lblBetAmount.TabIndex = 116;
+            // 
             // Blackjack
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1093, 655);
+            this.ClientSize = new System.Drawing.Size(1091, 670);
+            this.Controls.Add(this.lblBetAmount);
+            this.Controls.Add(this.txtBet);
+            this.Controls.Add(this.btnBet);
+            this.Controls.Add(this.lblMoneyAmount);
+            this.Controls.Add(this.lblMoney);
             this.Controls.Add(this.lbxDealerActions);
             this.Controls.Add(this.btnHit3);
             this.Controls.Add(this.btnHit2);
@@ -1676,6 +1728,11 @@ namespace Blackjack_App
         private System.Windows.Forms.Button btnHit2;
         private System.Windows.Forms.Button btnHit3;
         private System.Windows.Forms.ListBox lbxDealerActions;
+        private System.Windows.Forms.Label lblMoney;
+        private System.Windows.Forms.Label lblMoneyAmount;
+        private System.Windows.Forms.Button btnBet;
+        private System.Windows.Forms.TextBox txtBet;
+        private System.Windows.Forms.Label lblBetAmount;
     }
 }
 
