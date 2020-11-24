@@ -94,19 +94,19 @@ namespace Blackjack_App
             this.lblWinAmount = new System.Windows.Forms.Label();
             this.lblLossAmount = new System.Windows.Forms.Label();
             this.pbxTopDealt1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.pbxACDealt1 = new System.Windows.Forms.PictureBox();
+            this.pbx9CDealt1 = new System.Windows.Forms.PictureBox();
+            this.pbxKCDealt1 = new System.Windows.Forms.PictureBox();
+            this.pbxJCDealt1 = new System.Windows.Forms.PictureBox();
+            this.pbxQCDealt1 = new System.Windows.Forms.PictureBox();
+            this.pbx10CDealt1 = new System.Windows.Forms.PictureBox();
+            this.pbx8CDealt1 = new System.Windows.Forms.PictureBox();
+            this.pbx7CDealt1 = new System.Windows.Forms.PictureBox();
+            this.pbx6CDealt1 = new System.Windows.Forms.PictureBox();
+            this.pbx5CDealt1 = new System.Windows.Forms.PictureBox();
+            this.pbx4CDealt1 = new System.Windows.Forms.PictureBox();
+            this.pbx3CDealt1 = new System.Windows.Forms.PictureBox();
+            this.pbx2CDealt1 = new System.Windows.Forms.PictureBox();
             this.pbxTopDealt2 = new System.Windows.Forms.PictureBox();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
@@ -195,19 +195,19 @@ namespace Blackjack_App
             ((System.ComponentModel.ISupportInitialize)(this.pbx3CDealer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx2CDealer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxTopDealt1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxACDealt1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx9CDealt1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxKCDealt1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxJCDealt1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxQCDealt1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx10CDealt1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx8CDealt1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx7CDealt1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx6CDealt1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx5CDealt1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx4CDealt1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx3CDealt1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx2CDealt1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxTopDealt2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
@@ -870,135 +870,135 @@ namespace Blackjack_App
             this.pbxTopDealt1.TabIndex = 77;
             this.pbxTopDealt1.TabStop = false;
             // 
-            // pictureBox2
+            // pbxACDealt1
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(165, 232);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(114, 180);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 76;
-            this.pictureBox2.TabStop = false;
+            this.pbxACDealt1.Image = ((System.Drawing.Image)(resources.GetObject("pbxACDealt1.Image")));
+            this.pbxACDealt1.Location = new System.Drawing.Point(165, 232);
+            this.pbxACDealt1.Name = "pbxACDealt1";
+            this.pbxACDealt1.Size = new System.Drawing.Size(114, 180);
+            this.pbxACDealt1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxACDealt1.TabIndex = 76;
+            this.pbxACDealt1.TabStop = false;
             // 
-            // pictureBox3
+            // pbx9CDealt1
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(165, 232);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(114, 180);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 75;
-            this.pictureBox3.TabStop = false;
+            this.pbx9CDealt1.Image = ((System.Drawing.Image)(resources.GetObject("pbx9CDealt1.Image")));
+            this.pbx9CDealt1.Location = new System.Drawing.Point(165, 232);
+            this.pbx9CDealt1.Name = "pbx9CDealt1";
+            this.pbx9CDealt1.Size = new System.Drawing.Size(114, 180);
+            this.pbx9CDealt1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbx9CDealt1.TabIndex = 75;
+            this.pbx9CDealt1.TabStop = false;
             // 
-            // pictureBox4
+            // pbxKCDealt1
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(165, 232);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(114, 180);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 74;
-            this.pictureBox4.TabStop = false;
+            this.pbxKCDealt1.Image = ((System.Drawing.Image)(resources.GetObject("pbxKCDealt1.Image")));
+            this.pbxKCDealt1.Location = new System.Drawing.Point(165, 232);
+            this.pbxKCDealt1.Name = "pbxKCDealt1";
+            this.pbxKCDealt1.Size = new System.Drawing.Size(114, 180);
+            this.pbxKCDealt1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxKCDealt1.TabIndex = 74;
+            this.pbxKCDealt1.TabStop = false;
             // 
-            // pictureBox5
+            // pbxJCDealt1
             // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(165, 232);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(114, 180);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 73;
-            this.pictureBox5.TabStop = false;
+            this.pbxJCDealt1.Image = ((System.Drawing.Image)(resources.GetObject("pbxJCDealt1.Image")));
+            this.pbxJCDealt1.Location = new System.Drawing.Point(165, 232);
+            this.pbxJCDealt1.Name = "pbxJCDealt1";
+            this.pbxJCDealt1.Size = new System.Drawing.Size(114, 180);
+            this.pbxJCDealt1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxJCDealt1.TabIndex = 73;
+            this.pbxJCDealt1.TabStop = false;
             // 
-            // pictureBox6
+            // pbxQCDealt1
             // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(165, 232);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(114, 180);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 72;
-            this.pictureBox6.TabStop = false;
+            this.pbxQCDealt1.Image = ((System.Drawing.Image)(resources.GetObject("pbxQCDealt1.Image")));
+            this.pbxQCDealt1.Location = new System.Drawing.Point(165, 232);
+            this.pbxQCDealt1.Name = "pbxQCDealt1";
+            this.pbxQCDealt1.Size = new System.Drawing.Size(114, 180);
+            this.pbxQCDealt1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxQCDealt1.TabIndex = 72;
+            this.pbxQCDealt1.TabStop = false;
             // 
-            // pictureBox7
+            // pbx10CDealt1
             // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(165, 232);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(114, 180);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 71;
-            this.pictureBox7.TabStop = false;
+            this.pbx10CDealt1.Image = ((System.Drawing.Image)(resources.GetObject("pbx10CDealt1.Image")));
+            this.pbx10CDealt1.Location = new System.Drawing.Point(165, 232);
+            this.pbx10CDealt1.Name = "pbx10CDealt1";
+            this.pbx10CDealt1.Size = new System.Drawing.Size(114, 180);
+            this.pbx10CDealt1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbx10CDealt1.TabIndex = 71;
+            this.pbx10CDealt1.TabStop = false;
             // 
-            // pictureBox8
+            // pbx8CDealt1
             // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(165, 232);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(114, 180);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 70;
-            this.pictureBox8.TabStop = false;
+            this.pbx8CDealt1.Image = ((System.Drawing.Image)(resources.GetObject("pbx8CDealt1.Image")));
+            this.pbx8CDealt1.Location = new System.Drawing.Point(165, 232);
+            this.pbx8CDealt1.Name = "pbx8CDealt1";
+            this.pbx8CDealt1.Size = new System.Drawing.Size(114, 180);
+            this.pbx8CDealt1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbx8CDealt1.TabIndex = 70;
+            this.pbx8CDealt1.TabStop = false;
             // 
-            // pictureBox9
+            // pbx7CDealt1
             // 
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(165, 232);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(114, 180);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 69;
-            this.pictureBox9.TabStop = false;
+            this.pbx7CDealt1.Image = ((System.Drawing.Image)(resources.GetObject("pbx7CDealt1.Image")));
+            this.pbx7CDealt1.Location = new System.Drawing.Point(165, 232);
+            this.pbx7CDealt1.Name = "pbx7CDealt1";
+            this.pbx7CDealt1.Size = new System.Drawing.Size(114, 180);
+            this.pbx7CDealt1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbx7CDealt1.TabIndex = 69;
+            this.pbx7CDealt1.TabStop = false;
             // 
-            // pictureBox10
+            // pbx6CDealt1
             // 
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(165, 232);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(114, 180);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 68;
-            this.pictureBox10.TabStop = false;
+            this.pbx6CDealt1.Image = ((System.Drawing.Image)(resources.GetObject("pbx6CDealt1.Image")));
+            this.pbx6CDealt1.Location = new System.Drawing.Point(165, 232);
+            this.pbx6CDealt1.Name = "pbx6CDealt1";
+            this.pbx6CDealt1.Size = new System.Drawing.Size(114, 180);
+            this.pbx6CDealt1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbx6CDealt1.TabIndex = 68;
+            this.pbx6CDealt1.TabStop = false;
             // 
-            // pictureBox11
+            // pbx5CDealt1
             // 
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(165, 232);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(114, 180);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 67;
-            this.pictureBox11.TabStop = false;
+            this.pbx5CDealt1.Image = ((System.Drawing.Image)(resources.GetObject("pbx5CDealt1.Image")));
+            this.pbx5CDealt1.Location = new System.Drawing.Point(165, 232);
+            this.pbx5CDealt1.Name = "pbx5CDealt1";
+            this.pbx5CDealt1.Size = new System.Drawing.Size(114, 180);
+            this.pbx5CDealt1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbx5CDealt1.TabIndex = 67;
+            this.pbx5CDealt1.TabStop = false;
             // 
-            // pictureBox12
+            // pbx4CDealt1
             // 
-            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(165, 232);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(114, 180);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox12.TabIndex = 66;
-            this.pictureBox12.TabStop = false;
+            this.pbx4CDealt1.Image = ((System.Drawing.Image)(resources.GetObject("pbx4CDealt1.Image")));
+            this.pbx4CDealt1.Location = new System.Drawing.Point(165, 232);
+            this.pbx4CDealt1.Name = "pbx4CDealt1";
+            this.pbx4CDealt1.Size = new System.Drawing.Size(114, 180);
+            this.pbx4CDealt1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbx4CDealt1.TabIndex = 66;
+            this.pbx4CDealt1.TabStop = false;
             // 
-            // pictureBox13
+            // pbx3CDealt1
             // 
-            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(165, 232);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(114, 180);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox13.TabIndex = 65;
-            this.pictureBox13.TabStop = false;
+            this.pbx3CDealt1.Image = ((System.Drawing.Image)(resources.GetObject("pbx3CDealt1.Image")));
+            this.pbx3CDealt1.Location = new System.Drawing.Point(165, 232);
+            this.pbx3CDealt1.Name = "pbx3CDealt1";
+            this.pbx3CDealt1.Size = new System.Drawing.Size(114, 180);
+            this.pbx3CDealt1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbx3CDealt1.TabIndex = 65;
+            this.pbx3CDealt1.TabStop = false;
             // 
-            // pictureBox14
+            // pbx2CDealt1
             // 
-            this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
-            this.pictureBox14.Location = new System.Drawing.Point(165, 232);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(114, 180);
-            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox14.TabIndex = 64;
-            this.pictureBox14.TabStop = false;
+            this.pbx2CDealt1.Image = ((System.Drawing.Image)(resources.GetObject("pbx2CDealt1.Image")));
+            this.pbx2CDealt1.Location = new System.Drawing.Point(165, 232);
+            this.pbx2CDealt1.Name = "pbx2CDealt1";
+            this.pbx2CDealt1.Size = new System.Drawing.Size(114, 180);
+            this.pbx2CDealt1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbx2CDealt1.TabIndex = 64;
+            this.pbx2CDealt1.TabStop = false;
             // 
             // pbxTopDealt2
             // 
@@ -1347,19 +1347,19 @@ namespace Blackjack_App
             this.Controls.Add(this.pictureBox27);
             this.Controls.Add(this.pictureBox28);
             this.Controls.Add(this.pbxTopDealt1);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.pictureBox9);
-            this.Controls.Add(this.pictureBox10);
-            this.Controls.Add(this.pictureBox11);
-            this.Controls.Add(this.pictureBox12);
-            this.Controls.Add(this.pictureBox13);
-            this.Controls.Add(this.pictureBox14);
+            this.Controls.Add(this.pbxACDealt1);
+            this.Controls.Add(this.pbx9CDealt1);
+            this.Controls.Add(this.pbxKCDealt1);
+            this.Controls.Add(this.pbxJCDealt1);
+            this.Controls.Add(this.pbxQCDealt1);
+            this.Controls.Add(this.pbx10CDealt1);
+            this.Controls.Add(this.pbx8CDealt1);
+            this.Controls.Add(this.pbx7CDealt1);
+            this.Controls.Add(this.pbx6CDealt1);
+            this.Controls.Add(this.pbx5CDealt1);
+            this.Controls.Add(this.pbx4CDealt1);
+            this.Controls.Add(this.pbx3CDealt1);
+            this.Controls.Add(this.pbx2CDealt1);
             this.Controls.Add(this.lblLossAmount);
             this.Controls.Add(this.lblWinAmount);
             this.Controls.Add(this.lblLoss);
@@ -1483,19 +1483,19 @@ namespace Blackjack_App
             ((System.ComponentModel.ISupportInitialize)(this.pbx3CDealer1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx2CDealer1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxTopDealt1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxACDealt1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx9CDealt1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxKCDealt1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxJCDealt1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxQCDealt1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx10CDealt1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx8CDealt1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx7CDealt1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx6CDealt1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx5CDealt1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx4CDealt1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx3CDealt1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx2CDealt1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxTopDealt2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
@@ -1595,19 +1595,19 @@ namespace Blackjack_App
         private System.Windows.Forms.Label lblWinAmount;
         private System.Windows.Forms.Label lblLossAmount;
         private System.Windows.Forms.PictureBox pbxTopDealt1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.PictureBox pictureBox12;
-        private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.PictureBox pictureBox14;
+        private System.Windows.Forms.PictureBox pbxACDealt1;
+        private System.Windows.Forms.PictureBox pbx9CDealt1;
+        private System.Windows.Forms.PictureBox pbxKCDealt1;
+        private System.Windows.Forms.PictureBox pbxJCDealt1;
+        private System.Windows.Forms.PictureBox pbxQCDealt1;
+        private System.Windows.Forms.PictureBox pbx10CDealt1;
+        private System.Windows.Forms.PictureBox pbx8CDealt1;
+        private System.Windows.Forms.PictureBox pbx7CDealt1;
+        private System.Windows.Forms.PictureBox pbx6CDealt1;
+        private System.Windows.Forms.PictureBox pbx5CDealt1;
+        private System.Windows.Forms.PictureBox pbx4CDealt1;
+        private System.Windows.Forms.PictureBox pbx3CDealt1;
+        private System.Windows.Forms.PictureBox pbx2CDealt1;
         private System.Windows.Forms.PictureBox pbxTopDealt2;
         private System.Windows.Forms.PictureBox pictureBox16;
         private System.Windows.Forms.PictureBox pictureBox17;

@@ -32,8 +32,13 @@ namespace Blackjack_App
         public static int user2;
         public static int dealer1;
         public static int dealer2;
+        public static int dealt1;
+        public static int dealt2;
+        public static int dealt3;
         public static int lossAmount;
         public static int winAmount;
+        public static int userTotal;
+        public static int dealerTotal;
 
         public Blackjack()
         {
@@ -46,9 +51,6 @@ namespace Blackjack_App
             userCard2 = cards[random.Next(cards.Length)];
             dealerCard1 = cards[random.Next(cards.Length)];
             dealerCard2 = cards[random.Next(cards.Length)];
-            dealtCard1 = cards[random.Next(cards.Length)];
-            dealtCard2 = cards[random.Next(cards.Length)];
-            dealtCard3 = cards[random.Next(cards.Length)];
 
             pbxTopDealer2.BringToFront();
 
@@ -261,12 +263,19 @@ namespace Blackjack_App
                 case 14:
                     dealer2 = 11;
                     break;                    
-            }                    
+            }
+
+            userTotal = user1 + user2;
+            dealerTotal = dealer1 + dealer2;
+
+            pbxTopDealt1.BringToFront();
+
+            btnHit.Visible = true;
         }
 
         private void Blackjack_Load(object sender, EventArgs e)
         {
-
+            btnHit.Visible = false;
         }
 
         private void btnRestart_Click(object sender, EventArgs e)
@@ -282,11 +291,78 @@ namespace Blackjack_App
             lblLossAmount.Text = "";
             winAmount = 0;
             lossAmount = 0;
+            btnHit.Visible = false;
         }
 
         private void btnHit_Click(object sender, EventArgs e)
         {
+            dealtCard1 = cards[random.Next(cards.Length)];
+            dealtCard2 = cards[random.Next(cards.Length)];
+            dealtCard3 = cards[random.Next(cards.Length)];
 
+            switch (dealtCard1)
+            {
+                case 2:
+                    pbx2CDealt1.BringToFront();
+                    dealt1 = 2;
+                    break;
+                case 3:
+                    pbx3CDealt1.BringToFront();
+                    dealt1 = 3;
+                    break;
+                case 4:
+                    pbx4CDealt1.BringToFront();
+                    dealt1 = 4;
+                    break;
+                case 5:
+                    pbx5CDealt1.BringToFront();
+                    dealt1 = 5;
+                    break;
+                case 6:
+                    pbx6CDealt1.BringToFront();
+                    dealt1 = 6;
+                    break;
+                case 7:
+                    pbx7CDealt1.BringToFront();
+                    dealt1 = 7;
+                    break;
+                case 8:
+                    pbx8CDealt1.BringToFront();
+                    dealt1 = 8;
+                    break;
+                case 9:
+                    pbx9CDealt1.BringToFront();
+                    dealt1 = 9;
+                    break;
+                case 10:
+                    pbx10CDealt1.BringToFront();
+                    dealt1 = 10;
+                    break;
+                case 11:
+                    pbxJCDealt1.BringToFront();
+                    dealt1 = 10;
+                    break;
+                case 12:
+                    pbxQCDealt1.BringToFront();
+                    dealt1 = 10;
+                    break;
+                case 13:
+                    pbxKCDealt1.BringToFront();
+                    dealt1 = 10;
+                    break;
+                case 14:
+                    pbxACDealt1.BringToFront();
+                    dealt1 = 11;
+                    break;
+            }
+
+            userTotal = userTotal + dealt1;
+            if(userTotal > 21)
+            {
+                MessageBox.Show($"You broke 21. You lost.");
+                lossAmount = lossAmount + 1;
+                lblLossAmount.Text = Convert.ToString(lossAmount);
+            }
         }
 
         private void btnReady_Click(object sender, EventArgs e)
@@ -334,15 +410,27 @@ namespace Blackjack_App
                     break;
             }
 
-            if (dealer1 + dealer2 >= user1 + user2 && dealer1 + dealer2 <= 21)
+            if (dealerTotal >= userTotal && dealerTotal < 21)
             {
-                MessageBox.Show($"You lost. The dealer had {dealer1 + dealer2} points and you had {user1 + user2} points.");
+                MessageBox.Show($"You lost. The dealer had {dealerTotal} points and you had {userTotal} points.");
                 lossAmount = lossAmount + 1;
                 lblLossAmount.Text = Convert.ToString(lossAmount);
             }
+            else if(dealerTotal == 21)
+            {
+                MessageBox.Show($"The dealer had blackjack, {dealerTotal}! You lost.");
+                lossAmount = lossAmount + 1;
+                lblLossAmount.Text = Convert.ToString(lossAmount);
+            }
+            else if (userTotal == 21)
+            {
+                MessageBox.Show($"You had blackjack {userTotal}! You won!");
+                winAmount = winAmount + 1;
+                lblWinAmount.Text = Convert.ToString(winAmount);
+            }
             else
             {
-                MessageBox.Show($"You won! The dealer had {dealer1 + dealer2} points and you had {user1 + user2} points.");
+                MessageBox.Show($"You won! The dealer had {dealerTotal} points and you had {userTotal} points.");
                 winAmount = winAmount + 1;
                 lblWinAmount.Text = Convert.ToString(winAmount);
             }
