@@ -140,6 +140,7 @@ namespace Blackjack_App
             this.btnHit = new System.Windows.Forms.Button();
             this.btnHit2 = new System.Windows.Forms.Button();
             this.btnHit3 = new System.Windows.Forms.Button();
+            this.lbxDealerActions = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbx2C)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx3C)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx4C)).BeginInit();
@@ -1332,11 +1333,20 @@ namespace Blackjack_App
             this.btnHit3.UseVisualStyleBackColor = true;
             this.btnHit3.Click += new System.EventHandler(this.btnHit3_Click);
             // 
+            // lbxDealerActions
+            // 
+            this.lbxDealerActions.FormattingEnabled = true;
+            this.lbxDealerActions.Location = new System.Drawing.Point(122, 63);
+            this.lbxDealerActions.Name = "lbxDealerActions";
+            this.lbxDealerActions.Size = new System.Drawing.Size(120, 95);
+            this.lbxDealerActions.TabIndex = 111;
+            // 
             // Blackjack
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1093, 655);
+            this.Controls.Add(this.lbxDealerActions);
             this.Controls.Add(this.btnHit3);
             this.Controls.Add(this.btnHit2);
             this.Controls.Add(this.btnHit);
@@ -1665,6 +1675,7 @@ namespace Blackjack_App
         private System.Windows.Forms.Button btnHit;
         private System.Windows.Forms.Button btnHit2;
         private System.Windows.Forms.Button btnHit3;
+        private System.Windows.Forms.ListBox lbxDealerActions;
     }
 }
 

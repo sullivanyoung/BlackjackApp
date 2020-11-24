@@ -21,24 +21,30 @@ namespace Blackjack_App
 
         public static int[] cards = { 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 };
         public static Random random = new Random();
-        public static int userCard1;
-        public static int userCard2;
-        public static int dealerCard1;
-        public static int dealerCard2;
-        public static int dealtCard1;
-        public static int dealtCard2;
-        public static int dealtCard3;
-        public static int user1;
-        public static int user2;
-        public static int dealer1;
-        public static int dealer2;
-        public static int dealt1;
-        public static int dealt2;
-        public static int dealt3;
-        public static int lossAmount;
-        public static int winAmount;
-        public static int userTotal;
-        public static int dealerTotal;
+        public static int userCard1; // card that appears for user --> refers to array
+        public static int userCard2; // 2nd card that appears for user --> refers to array
+        public static int dealerCard1; // card the appears for dealer --> refers to array
+        public static int dealerCard2; // 2nd card that is held invisible for dealer at start --> refers to array
+        public static int dealtCard1; // user dealt card that appears 1st --> refers to array
+        public static int dealtCard2; // user dealt card that appears 2nd --> refers to array
+        public static int dealtCard3; // user dealt card that appears 3rd --> refers to array
+        public static int user1; // user card value 1
+        public static int user2; // user card value 2
+        public static int dealer1; // dealer card value 1
+        public static int dealer2; // dealer card value 2
+        public static int dealt1; // user hit 1 value
+        public static int dealt2; // user hit 2 value
+        public static int dealt3; // user hit 3 value
+        public static int dealerDealtCard1; // automatic dealer hits 1st --> refers to array
+        public static int dealerDealtCard2; // automatic dealer hits 2nd --> refers to array
+        public static int dealerDealtCard3; // automatic dealer hits 3rd --> refers to array
+        public static int dealerDealt1; // dealer hit 1 value
+        public static int dealerDealt2; // dealer hit 2 value
+        public static int dealerDealt3; // dealer hit 3 value
+        public static int lossAmount; // calculate total losses
+        public static int winAmount; // calculate total wins
+        public static int userTotal; // user total amount (user1 + user 2... etc)
+        public static int dealerTotal; // dealer total amount (dealer1 + dealer 2...etc)
 
         public Blackjack()
         {
@@ -269,10 +275,14 @@ namespace Blackjack_App
             dealerTotal = dealer1 + dealer2;
 
             pbxTopDealt1.BringToFront();
+            pbxTopDealt2.BringToFront();
+            pbxTopDealt3.BringToFront();
 
             btnHit.Visible = true;
             btnReady.Visible = true;
             btnDeal.Visible = false;
+
+            lbxDealerActions.Items.Clear();
         }
 
         private void Blackjack_Load(object sender, EventArgs e)
@@ -301,6 +311,7 @@ namespace Blackjack_App
             btnReady.Visible = false;
             btnHit2.Visible = false;
             btnHit3.Visible = false;
+            lbxDealerActions.Items.Clear();
         }
 
         private void btnHit_Click(object sender, EventArgs e)
@@ -381,6 +392,106 @@ namespace Blackjack_App
 
         private void btnReady_Click(object sender, EventArgs e)
         {
+            if(dealerTotal <= 11)
+            {
+                dealerDealtCard1 = cards[random.Next(cards.Length)];
+                switch (dealerDealtCard1)
+                {
+                    case 2:
+                        dealerDealt1 = 2;
+                        break;
+                    case 3:
+                        dealerDealt1 = 3;
+                        break;
+                    case 4:
+                        dealerDealt1 = 4;
+                        break;
+                    case 5:
+                        dealerDealt1 = 5;
+                        break;
+                    case 6:
+                        dealerDealt1 = 6;
+                        break;
+                    case 7:
+                        dealerDealt1 = 7;
+                        break;
+                    case 8:
+                        dealerDealt1 = 8;
+                        break;
+                    case 9:
+                        dealerDealt1 = 9;
+                        break;
+                    case 10:
+                        dealerDealt1 = 10;
+                        break;
+                    case 11:
+                        dealerDealt1 = 10;
+                        break;
+                    case 12:
+                        dealerDealt1 = 10;
+                        break;
+                    case 13:
+                        dealerDealt1 = 10;
+                        break;
+                    case 14:
+                        dealerDealt1 = 11;
+                        break;
+                }
+                lbxDealerActions.Items.Add($"Dealer hit and got {dealerDealt1}");
+                dealerTotal = dealerTotal + dealerDealt1;
+                lbxDealerActions.Items.Add($"Dealer Total: {dealerTotal}");
+            }
+
+            if (dealerTotal <= 14)
+            {
+                dealerDealtCard2 = cards[random.Next(cards.Length)];
+                switch (dealerDealtCard2)
+                {
+                    case 2:
+                        dealerDealt2 = 2;
+                        break;
+                    case 3:
+                        dealerDealt2 = 3;
+                        break;
+                    case 4:
+                        dealerDealt2 = 4;
+                        break;
+                    case 5:
+                        dealerDealt2 = 5;
+                        break;
+                    case 6:
+                        dealerDealt2 = 6;
+                        break;
+                    case 7:
+                        dealerDealt2 = 7;
+                        break;
+                    case 8:
+                        dealerDealt2 = 8;
+                        break;
+                    case 9:
+                        dealerDealt2 = 9;
+                        break;
+                    case 10:
+                        dealerDealt2 = 10;
+                        break;
+                    case 11:
+                        dealerDealt2 = 10;
+                        break;
+                    case 12:
+                        dealerDealt2 = 10;
+                        break;
+                    case 13:
+                        dealerDealt2 = 10;
+                        break;
+                    case 14:
+                        dealerDealt2 = 11;
+                        break;
+                }
+                lbxDealerActions.Items.Add($"Dealer hit and got {dealerDealt2}");
+                dealerTotal = dealerTotal + dealerDealt2;
+                lbxDealerActions.Items.Add($"Dealer Total: {dealerTotal}");
+            }
+
             switch (dealerCard2)
             {
                 case 2:
@@ -435,6 +546,12 @@ namespace Blackjack_App
                 MessageBox.Show($"The dealer had blackjack, {dealerTotal}! You lost.");
                 lossAmount = lossAmount + 1;
                 lblLossAmount.Text = Convert.ToString(lossAmount);
+            }
+            else if(dealerTotal > 21)
+            {
+                MessageBox.Show($"You won! The dealer broke 21!");
+                winAmount = winAmount + 1;
+                lblWinAmount.Text = Convert.ToString(winAmount);
             }
             else if (userTotal == 21)
             {
@@ -533,6 +650,7 @@ namespace Blackjack_App
                 lossAmount = lossAmount + 1;
                 lblLossAmount.Text = Convert.ToString(lossAmount);
                 btnReady.Visible = false;
+                btnHit.Visible = false;
                 btnHit2.Visible = false;
                 btnDeal.Visible = true;
             }
@@ -609,6 +727,8 @@ namespace Blackjack_App
                 lossAmount = lossAmount + 1;
                 lblLossAmount.Text = Convert.ToString(lossAmount);
                 btnReady.Visible = false;
+                btnHit.Visible = false;
+                btnHit2.Visible = false;
                 btnHit3.Visible = false;
                 btnDeal.Visible = true;
             }
