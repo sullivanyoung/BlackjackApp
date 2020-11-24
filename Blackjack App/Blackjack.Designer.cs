@@ -90,7 +90,7 @@ namespace Blackjack_App
             this.pbx3CDealer1 = new System.Windows.Forms.PictureBox();
             this.pbx2CDealer1 = new System.Windows.Forms.PictureBox();
             this.lblWins = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblLoss = new System.Windows.Forms.Label();
             this.lblWinAmount = new System.Windows.Forms.Label();
             this.lblLossAmount = new System.Windows.Forms.Label();
             this.pbxTopDealt1 = new System.Windows.Forms.PictureBox();
@@ -834,14 +834,14 @@ namespace Blackjack_App
             this.lblWins.TabIndex = 60;
             this.lblWins.Text = "Wins:";
             // 
-            // label1
+            // lblLoss
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(891, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
-            this.label1.TabIndex = 61;
-            this.label1.Text = "Losses:";
+            this.lblLoss.AutoSize = true;
+            this.lblLoss.Location = new System.Drawing.Point(891, 44);
+            this.lblLoss.Name = "lblLoss";
+            this.lblLoss.Size = new System.Drawing.Size(43, 13);
+            this.lblLoss.TabIndex = 61;
+            this.lblLoss.Text = "Losses:";
             // 
             // lblWinAmount
             // 
@@ -1349,7 +1349,7 @@ namespace Blackjack_App
             this.Controls.Add(this.pictureBox14);
             this.Controls.Add(this.lblLossAmount);
             this.Controls.Add(this.lblWinAmount);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblLoss);
             this.Controls.Add(this.lblWins);
             this.Controls.Add(this.pbxTopDealer2);
             this.Controls.Add(this.pbxACDealer2);
@@ -1578,7 +1578,7 @@ namespace Blackjack_App
         private System.Windows.Forms.PictureBox pbx3CDealer1;
         private System.Windows.Forms.PictureBox pbx2CDealer1;
         private System.Windows.Forms.Label lblWins;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblLoss;
         private System.Windows.Forms.Label lblWinAmount;
         private System.Windows.Forms.Label lblLossAmount;
         private System.Windows.Forms.PictureBox pbxTopDealt1;
