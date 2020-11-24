@@ -271,11 +271,16 @@ namespace Blackjack_App
             pbxTopDealt1.BringToFront();
 
             btnHit.Visible = true;
+            btnReady.Visible = true;
+            btnDeal.Visible = false;
         }
 
         private void Blackjack_Load(object sender, EventArgs e)
         {
             btnHit.Visible = false;
+            btnReady.Visible = false;
+            btnHit2.Visible = false;
+            btnHit3.Visible = false;
         }
 
         private void btnRestart_Click(object sender, EventArgs e)
@@ -292,13 +297,15 @@ namespace Blackjack_App
             winAmount = 0;
             lossAmount = 0;
             btnHit.Visible = false;
+            btnDeal.Visible = true;
+            btnReady.Visible = false;
+            btnHit2.Visible = false;
+            btnHit3.Visible = false;
         }
 
         private void btnHit_Click(object sender, EventArgs e)
         {
             dealtCard1 = cards[random.Next(cards.Length)];
-            dealtCard2 = cards[random.Next(cards.Length)];
-            dealtCard3 = cards[random.Next(cards.Length)];
 
             switch (dealtCard1)
             {
@@ -362,6 +369,13 @@ namespace Blackjack_App
                 MessageBox.Show($"You broke 21. You lost.");
                 lossAmount = lossAmount + 1;
                 lblLossAmount.Text = Convert.ToString(lossAmount);
+                btnReady.Visible = false;
+                btnHit.Visible = false;
+                btnDeal.Visible = true;
+            }
+            else
+            {
+                btnHit2.Visible = true;
             }
         }
 
@@ -433,6 +447,170 @@ namespace Blackjack_App
                 MessageBox.Show($"You won! The dealer had {dealerTotal} points and you had {userTotal} points.");
                 winAmount = winAmount + 1;
                 lblWinAmount.Text = Convert.ToString(winAmount);
+            }
+
+            pbxTopUser1.BringToFront();
+            pbxTopUser2.BringToFront();
+            pbxTopDealer1.BringToFront();
+            pbxTopDealer2.BringToFront();
+            pbxTopDealt1.BringToFront();
+            pbxTopDealt2.BringToFront();
+            pbxTopDealt3.BringToFront();
+
+            btnDeal.Visible = true;
+            btnReady.Visible = false;
+            btnHit.Visible = false;
+            btnHit3.Visible = false;
+            btnHit2.Visible = false;
+
+
+        }
+
+        private void btnHit2_Click(object sender, EventArgs e)
+        {
+            dealtCard2 = cards[random.Next(cards.Length)];
+
+            switch (dealtCard2)
+            {
+                case 2:
+                    pbx2CDealt2.BringToFront();
+                    dealt2 = 2;
+                    break;
+                case 3:
+                    pbx3CDealt2.BringToFront();
+                    dealt2 = 3;
+                    break;
+                case 4:
+                    pbx4CDealt2.BringToFront();
+                    dealt2 = 4;
+                    break;
+                case 5:
+                    pbx5CDealt2.BringToFront();
+                    dealt2 = 5;
+                    break;
+                case 6:
+                    pbx6CDealt2.BringToFront();
+                    dealt2 = 6;
+                    break;
+                case 7:
+                    pbx7CDealt2.BringToFront();
+                    dealt2 = 7;
+                    break;
+                case 8:
+                    pbx8CDealt2.BringToFront();
+                    dealt2 = 8;
+                    break;
+                case 9:
+                    pbx9CDealt2.BringToFront();
+                    dealt2 = 9;
+                    break;
+                case 10:
+                    pbx10CDealt2.BringToFront();
+                    dealt2 = 10;
+                    break;
+                case 11:
+                    pbxJCDealt2.BringToFront();
+                    dealt2 = 10;
+                    break;
+                case 12:
+                    pbxQCDealt2.BringToFront();
+                    dealt2 = 10;
+                    break;
+                case 13:
+                    pbxKCDealt2.BringToFront();
+                    dealt2 = 10;
+                    break;
+                case 14:
+                    pbxACDealt2.BringToFront();
+                    dealt2 = 11;
+                    break;
+            }
+
+            userTotal = userTotal + dealt2;
+            if (userTotal > 21)
+            {
+                MessageBox.Show($"You broke 21. You lost.");
+                lossAmount = lossAmount + 1;
+                lblLossAmount.Text = Convert.ToString(lossAmount);
+                btnReady.Visible = false;
+                btnHit2.Visible = false;
+                btnDeal.Visible = true;
+            }
+            else
+            {
+                btnHit3.Visible = true;
+            }
+        }
+
+        private void btnHit3_Click(object sender, EventArgs e)
+        {
+            dealtCard3 = cards[random.Next(cards.Length)];
+
+            switch (dealtCard3)
+            {
+                case 2:
+                    pbx2CDealt3.BringToFront();
+                    dealt3 = 2;
+                    break;
+                case 3:
+                    pbx3CDealt3.BringToFront();
+                    dealt3 = 3;
+                    break;
+                case 4:
+                    pbx4CDealt3.BringToFront();
+                    dealt3 = 4;
+                    break;
+                case 5:
+                    pbx5CDealt3.BringToFront();
+                    dealt3 = 5;
+                    break;
+                case 6:
+                    pbx6CDealt3.BringToFront();
+                    dealt3 = 6;
+                    break;
+                case 7:
+                    pbx7CDealt3.BringToFront();
+                    dealt3 = 7;
+                    break;
+                case 8:
+                    pbx8CDealt3.BringToFront();
+                    dealt3 = 8;
+                    break;
+                case 9:
+                    pbx9CDealt3.BringToFront();
+                    dealt3 = 9;
+                    break;
+                case 10:
+                    pbx10CDealt3.BringToFront();
+                    dealt3 = 10;
+                    break;
+                case 11:
+                    pbxJCDealt3.BringToFront();
+                    dealt3 = 10;
+                    break;
+                case 12:
+                    pbxQCDealt3.BringToFront();
+                    dealt3 = 10;
+                    break;
+                case 13:
+                    pbxKCDealt3.BringToFront();
+                    dealt3 = 10;
+                    break;
+                case 14:
+                    pbxACDealt3.BringToFront();
+                    dealt3 = 11;
+                    break;
+            }
+
+            userTotal = userTotal + dealt3;
+            if (userTotal > 21)
+            {
+                MessageBox.Show($"You broke 21. You lost.");
+                lossAmount = lossAmount + 1;
+                lblLossAmount.Text = Convert.ToString(lossAmount);
+                btnReady.Visible = false;
+                btnHit3.Visible = false;
+                btnDeal.Visible = true;
             }
         }
     }
